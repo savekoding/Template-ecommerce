@@ -1,0 +1,132 @@
+
+
+.contact-us{
+    width: 90vw;
+    margin-inline: auto;
+    align-items: center;
+    --grid-gap: 4rem;
+    margin-block: 3rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two';
+}
+
+.contact-us:nth-child(1){
+    grid-area: one;
+}
+
+.contact-us:nth-child(2){
+    grid-area: two;
+}
+
+.contact-form{
+    margin-block: 2rem;
+    --grid-gap: 1rem;
+}
+
+.contact-us input{
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.contact-us input:focus{
+    outline: 0;
+}
+
+.contact-us textarea{
+    width: 100%;
+    border: 0;
+    border-radius: 2rem;
+}
+
+.contact-us textarea:focus{
+    outline: 0;
+}
+
+.contact-btn > button{
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+.map{
+    background-color: hsl(var(--clr-red) / 0.3);
+    padding: 1rem 2rem;
+    margin-block: 2rem;
+    position: relative;
+}
+
+.map::before{
+    content: '';
+    width: 5px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: hsl(var(--clr-red));
+    position: absolute;
+}
+
+@media (min-width: 45em){
+    .contact-us{
+        grid-template-areas: 
+        'one two';
+    }
+    .contact-us h1{
+        font-size: 1rem;
+    }
+    .map h4{
+        font-size: 1rem;
+    }
+
+}
+
+/* =============Support================== */
+
+.suport-container{
+    width: 90vw;
+    margin-inline: auto;
+    margin-bottom: 7rem;
+    place-items: center;
+    --grid-gap: 3rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three';
+}
+
+.suport-container:nth-child(1){
+    grid-area: one;
+}
+
+.suport-container:nth-child(2){
+    grid-area: two;
+}
+.suport-container:nth-child(3){
+    grid-area: three;
+}
+
+.support-info{
+    --grid-gap: 1rem;
+}
+.suport-img{
+    place-items: center;
+}
+
+.support-info{
+    place-items: center;
+}
+
+
+@media (min-width: 45em){
+    .suport-container{
+        grid-template-areas: 
+        'one two three';
+    }
+    .support-info > p,
+    .support-info span{
+        font-size: 1rem;
+    }
+}
